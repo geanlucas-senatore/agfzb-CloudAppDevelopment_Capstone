@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dealership Review</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -10,12 +11,8 @@
     <link href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css" rel="stylesheet">
     <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
-
 </head>
-
-    <body>
-    <!-- Remove this line the first time you edit this file 
-     This is the index page of your Django app!-->
+<body>
     <!--Add a nav bar here -->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -45,12 +42,30 @@
             </ul>
         </div>
     </nav>
-    <!--Add a dealer table here -->
 
-    </body>
-    <script>
-        $(function() {
-          $('#table').bootstrapTable()
-        })
-    </script>
+    <!-- Content -->
+    <br>
+    <div class="container">
+        <div class="page-header">
+          <h1>Contact</h1>      
+        </div>
+        <hr>
+        <p>Office : New York, NY 10012, US</p>
+        <p>Email : bestcar@dealership.com</p>
+        <p>Telphone : + 01 234 567 88</p>
+        <p>Fax : + 01 234 567 89</p>   
+    </div>
+
+    <!-- Footer Navbar -->
+    <footer class="navbar navbar-light bg-light" style="margin-top:15px; bottom:0; width:100%">
+        <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{% url 'djangoapp:contact' %}">Contact Us</a>
+            </div>
+            <div class="text-center p-3">
+                © 2023 <a class="text-dark" href="{% url 'djangoapp:index' %}">Dealership Review</a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
